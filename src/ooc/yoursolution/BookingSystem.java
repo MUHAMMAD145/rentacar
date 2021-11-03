@@ -22,20 +22,25 @@ public class BookingSystem implements BookingSystemInterface{
         String input, name;
         List<Car> cars = new ArrayList<>();
         name = in.readLine();
-        
-        
-            for(int i=0;i<numOfCars;i++){
-                Car car = new Car(i,make,rate);
-                cars.add(car);
+            
+            while((input = in.readLine())!=null){
+                String definer[] = input.split(":");
+                
+                Make make = Make.valueOf(definer[0]);
+                double rate = Double.parseDouble(definer[1]);
+                int numOfCars = Integer.parseInt(definer[2]);
+                
+                for(int i=0;i<numOfCars;i++){
+                    Car car = new Car(i,make,rate);
+                    cars.add(car);
                 }
-            }
+            
+        }
             RentACarInterface rentACarInterface = new RentACar(cars,name);
             
             return rentACarInterface;
-    
-        }
-
-    
     }
+
+}
     
 
