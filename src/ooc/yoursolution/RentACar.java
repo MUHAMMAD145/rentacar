@@ -14,6 +14,13 @@ import ooc.enums.Month;
  */
 public class RentACar implements RentACarInterface{
 
+    private List <Car>cars;
+    private String name;
+    
+    public RentACar (List<Car> Cars, String name){
+        this.cars = cars;
+        this.name = name;
+    }
     @Override
     public List getCars() {
         return cars;
