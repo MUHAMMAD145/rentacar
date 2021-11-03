@@ -53,8 +53,8 @@ public class Car implements CarInterface{
     }
 
     @Override
-    public Make getMake() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Make getMake() { //returning the make of the cars
+        return make;
     }
 
     @Override
