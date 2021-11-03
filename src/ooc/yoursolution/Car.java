@@ -78,8 +78,8 @@ public class Car implements CarInterface{
     }
 
     @Override
-    public void setAvailability(Map<Month, boolean[]> availability) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setAvailability(Map availability) { //setting availability for the calender
+    this.map = map;
     }
 
     @Override
