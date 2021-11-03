@@ -15,8 +15,8 @@ import ooc.enums.Month;
 public class RentACar implements RentACarInterface{
 
     @Override
-    public List<CarInterface> getCars() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List getCars() {
+        return cars;
     }
 
     @Override
