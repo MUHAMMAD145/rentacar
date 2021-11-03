@@ -68,8 +68,8 @@ public class Car implements CarInterface{
     }
 
     @Override
-    public void setRate(double rate) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setRate(double rate) { //setter for rate
+        this.rate = rate;
     }
 
     @Override
