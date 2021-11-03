@@ -63,8 +63,8 @@ public class Car implements CarInterface{
     }
 
     @Override
-    public double getRate() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double getRate() { //return the rate of the cars
+        return rate;
     }
 
     @Override
