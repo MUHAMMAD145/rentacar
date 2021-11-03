@@ -88,17 +88,23 @@ public class Car implements CarInterface{
     }
 
     @Override
-    public boolean isAvailable(Month month, int day) {//this boolean function defines if a particular day is availiable or not
+    public boolean isAvailable(Month month, int day) {//this boolean function defines if a particular day is availiable or not and returns
        Boolean[] available = map.get(month);          // **we use(-1) in the function because the index in java functions start at 0  
        if (available[day-1]==null){
            available[day-1] = true;
        }
-       return available[day-1];
+       return true;
     }
 
     @Override
-    public boolean book(Month month, int day) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean book(Month month, int day) {//this boolean function checks if a day is booked or not and returns 
+        Boolean[] book = map.get(month);
+        if (book[day-1]== null){
+            book [day-1] = false;
+            return true;
+            } 
+            return false;
+        }
     }
     
-}
+
