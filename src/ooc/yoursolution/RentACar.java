@@ -33,12 +33,12 @@ public class RentACar implements RentACarInterface{
 
     @Override
     public String getName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return name;
     }
 
     @Override
     public void setName(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.name = name;
     }
 
     @Override
