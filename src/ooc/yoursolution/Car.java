@@ -83,8 +83,8 @@ public class Car implements CarInterface{
     }
 
     @Override
-    public int getId() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int getId() { //returns the id
+        return id;
     }
 
     @Override
