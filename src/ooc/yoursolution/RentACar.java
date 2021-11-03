@@ -65,7 +65,24 @@ public class RentACar implements RentACarInterface{
 
     @Override
     public int getCarAvailable(Month month, int day, Make make, int lengthOfRent) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                int currentDay,flagDay;
+        for(Car car:cars){
+            if(car.getMake().equals(make)){
+                flagDay = 0;
+                currentDay = day;
+                for(int i=0; i<lengthOfRent; i++){
+                
+                    if(!car.isAvailable(month, day++)){
+                    flagDay = 1;
+                    break;
+                }
+            }
+                if(flagDay == 0){
+                    return car.getId();
+                }
+            }
+        }
+        return -1;
     }
 
     @Override
