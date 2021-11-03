@@ -27,8 +27,8 @@ public class RentACar implements RentACarInterface{
     }
 
     @Override
-    public void setCars(List<CarInterface> cars) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setCars(List cars) {
+        this.cars = cars;
     }
 
     @Override
