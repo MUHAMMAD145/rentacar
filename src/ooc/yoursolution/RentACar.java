@@ -14,34 +14,34 @@ import ooc.enums.Month;
  */
 public class RentACar implements RentACarInterface{
 
-    private List <Car>cars;
+    private List <Car>cars; //creates an arraylist called cars
     private String name;
     
-    public RentACar (List<Car> Cars, String name){
+    public RentACar (List<Car> cars, String name){
         this.cars = cars;
         this.name = name;
     }
-    @Override
+    @Override //returns List of cars
     public List getCars() {
         return cars;
     }
 
-    @Override
+    @Override // sets car in a list
     public void setCars(List cars) {
         this.cars = cars;
     }
 
     @Override
-    public String getName() {
+    public String getName() { //returns the name 
         return name;
     }
 
     @Override
-    public void setName(String name) {
+    public void setName(String name) { //sets the name
         this.name = name;
     }
 
-    @Override
+    @Override //this functions chcek availability of car based on month,day,type of car,and for how long and returns the value true if successfull
     public boolean checkAvailability(Month month, int day, Make make, int lengthOfRent) {
         int currentDay,flagDay;
         for(Car car:cars){
@@ -63,7 +63,7 @@ public class RentACar implements RentACarInterface{
         return false;
     }
 
-    @Override
+    @Override //the id of a car that fits that availability; returns the Id of a room that fits the bill
     public int getCarAvailable(Month month, int day, Make make, int lengthOfRent) {
                 int currentDay,flagDay;
         for(Car car:cars){
@@ -85,7 +85,7 @@ public class RentACar implements RentACarInterface{
         return -1;
     }
 
-    @Override
+    @Override //method uses attributes of the booking system to check if booking is successfull or not and returns true if booking is confirmed
     public boolean bookCar(Month month, int day, Make make, int lengthOfRent) {
         if(!checkAvailability(month,day,make,lengthOfRent)){
             return false;
@@ -105,9 +105,11 @@ public class RentACar implements RentACarInterface{
         }
         
 
-    @Override
+    @Override //returns total number of cars from the list
     public int getNumberOfCars() {
+
         return cars.size();
+        
     }
     
 }
